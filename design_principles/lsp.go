@@ -2,8 +2,7 @@ package main
 
 import "fmt"
 
-// 里氏替换原则
-
+// Action  里氏替换原则：描述的是子类方法不应该改变父类方法的定义；例如下面的 read()
 type Action interface {
 	Read()
 }
@@ -15,7 +14,7 @@ func (b *Book) Read() {
 }
 
 type Math struct {
-	Book // 继承父类的方法
+	Book // *******继承父类的方法
 }
 
 // 里氏替换，
@@ -28,6 +27,6 @@ func user() {
 	m.Read()
 }
 
-func main() {
-	user()
-}
+//func main() {
+//	user()
+//}
